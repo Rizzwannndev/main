@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+body{
+    min-height: 100vh;
+    background-color: #0e0f11;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.main .heart{
+    height: 200px;
+    width: 200px;
+    background: red;
+    animation: beat 1s infinite;
+    position: relative;
+}
+.main .heart::after,.main .heart::before{
+    content: '';
+    height: 200px;
+    width: 200px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+}
+.main .heart::after{
+    top:0;
+    left: -100px;
+}
+.main .heart::before{
+    right: 0;
+    top: -100px;
+}
+@keyframes beat{
+    0%{
+        transform:scale(1) rotate(45deg);
+    }
+    50%{
+        transform:scale(1.2) rotate(45deg);
+    }
+    100%{
+        transform:scale(1) rotate(45deg);
+    }
+}
+ 
+.text h1{
+    color: #ededed;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+    padding-top: 150px;
+}
+
+@media (max-width:415px) {
+    .main .heart{
+        height: 170px;
+        width: 170px;
+        background: red;
+        animation: beat 1s infinite;
+        position: relative;
+    }
+    .main .heart::after,.main .heart::before{
+        content: '';
+        height: 170px;
+        width: 170px;
+        background: red;
+        border-radius: 50%;
+        position: absolute;
+    }
+    .main .heart::after{
+        top:0;
+        left: -80px;
+    }
+    .main .heart::before{
+        right: 0;
+        top: -80px;
+    }
+    .text h1{
+        font-size: 20px;
+    }
+}
+video{
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+}
